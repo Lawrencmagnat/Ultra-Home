@@ -1,9 +1,13 @@
+const { response } = require("express");
 const express = require("express");
+const { Server } = require("http");
 
-const app = express();
+const server = express();
 
-app.use(express.urlencoded({ extended:false }));
-app.use(express.json());
+server.use(express.urlencoded({ extended:false }));
+server.use(express.json());
+
+const user = 
 
 const items = [
     {
@@ -146,23 +150,33 @@ function findItem(id) {
   }
 }
 
-//create a get endpont for getting list of houses av 
-app.get("/items", (req, res) => {
+server.get("/", function(req, res) {
+  response.json({ message: "Welcome to Ultra Homes"});
+})
+
+//create a get endpont for getting list of houses available
+server.get("/items", (req, res) => {
   return res.json(getItems())
 });
 
+//creating an account for the user 
+server.post("/create-account", function(req, res){
+    response.json(resquest.body);
+})
+
+
 //create a post endpoint for accepting form data and add it to the shopping list
-app.post("/add-item", function(req, res) {
+server.post("/add-item", function(req, res) {
     res.json('');
 });
 
 //create a get endpoint for display of a single item's name and price
-app.get("/items/:id", function(req, res) {
+server.get("/items/:id", (req, res) => {
   const id = req.params.id
 
   return res.json(findItem(id))
 });
 
-app.listen(8080, function() {
-  console.log('Server is running...');
+server.listen(8080, () => {
+  console.log("Server is running...");
 });
