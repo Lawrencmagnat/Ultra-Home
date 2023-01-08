@@ -7,7 +7,11 @@ const server = express();
 server.use(express.urlencoded({ extended:false }));
 server.use(express.json());
 
-const user = 
+const user = {
+    firstname: "",
+    lastname: "",
+    gender: "",
+};
 
 const items = [
     {
@@ -102,6 +106,18 @@ const items = [
 }
 ]
 
+//Creating a get endpoint for the homepage("/")
+server.get("/", function(req,res) {
+  res.send("Hello, Welcome to Ultra Home");  
+})
+
+//Creating a post endpoint that accepts data from the client 
+server.post("/create-account", function(req, res) {
+  console.log("Query", req.query);
+  console.log("Body", req.body)
+  
+  res.json(req.query);
+})
 // GET/items
 function getItems() {
   return {
@@ -149,10 +165,6 @@ function findItem(id) {
     }
   }
 }
-
-server.get("/", function(req, res) {
-  response.json({ message: "Welcome to Ultra Homes"});
-})
 
 //create a get endpont for getting list of houses available
 server.get("/items", (req, res) => {
