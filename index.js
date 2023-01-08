@@ -118,6 +118,7 @@ server.post("/create-account", function(req, res) {
   
   res.json(req.query);
 })
+
 // GET/items
 function getItems() {
   return {
@@ -170,11 +171,6 @@ function findItem(id) {
 server.get("/items", (req, res) => {
   return res.json(getItems())
 });
-
-//creating an account for the user 
-server.post("/create-account", function(req, res){
-    response.json(resquest.body);
-})
 
 
 //create a post endpoint for accepting form data and add it to the shopping list
