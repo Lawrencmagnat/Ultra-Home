@@ -8,23 +8,23 @@ server.use(express.urlencoded({ extended:false }));
 server.use(express.json());
 
 const user = {
-    firstname: "",
-    lastname: "",
-    gender: "",
+    name: "Emeka Ugwu",
+    email: "emekaugwu114@gmail.com",
+    password: "Emeka24",
 };
 
 const items = [
     {
-    name: "yogurt",
+    name: "Fully detached duplex",
     price: 7500000,
     currency: "NGN",
     location:"Lagos, Nigeria",
     description:"8 bedrooms, 9 bathrooms, 1700sqft  ",
-    available:"Yes",
+    available:"Rented",
     Id: 1
 },
 {
-    name: "banana",
+    name: "Semi-detached duplex",
     price: 2300000,
     currency: "NGN",
     location:"Lagos, Nigeria",
@@ -33,7 +33,7 @@ const items = [
     Id: 2
 },
 {
-  name: "grape",
+  name: "Bungalow",
   price: 1500000,
   currency: "NGN",
   location:"Lagos, Nigeria",
@@ -42,7 +42,7 @@ const items = [
   Id: 3
 },
 {
-  name: "apple",
+  name: "Unique 5 bedroom duplex",
   price: 1200000,
   currency: "NGN",
   location:"Lagos, Nigeria",
@@ -51,64 +51,46 @@ const items = [
   Id: 4
 },
 {
-  name: "orange",
-  price: 25,
-  currency: "USD",
-  location:"",
-  description:"",
-  available:"",
+  name: "Fully detached duplex",
+  price: 8000000,
+  currency: "NGN",
+  location:"Abuja, Nigeria",
+  description:"4 Bedrooms, 5 Bathrooms, 900sqft",
+  available:"yes",
   Id: 5
 },
 {
-  name: "pineapple",
-  price: 10,
+  name: "Bungalow",
+  price: 1200000,
   currency: "NGN",
-  location:"",
-  description:"",
-  available:"",
+  location:"Enugu, Nigeria",
+  description:"4 Bedrooms, 5Bathrooms, 900sqft",
+  available:"Rented",
   Id: 6
 },
 {
-    name: "pineapple",
-    price: 10,
+    name: "Semi-detached duplex",
+    price: 2000000,
     currency: "NGN",
-    location:"",
-    description:"",
-    available:"",
+    location:"Asaba, Nigeria",
+    description:"4 Bedrooms, 5 Bathrooms, 900sqft",
+    available:"Yes",
     Id: 7
 },
 {
-    name: "pineapple",
-    price: 10,
+    name: "Fully detached duplex",
+    price: 4200000,
     currency: "NGN",
-    location:"",
-    description:"",
-    available:"",
+    location:"Abia, Nigeria",
+    description:"4 Bedroom, 5 Bathrooms, 900sqft",
+    available:"Yes",
     Id: 8
-},
-{
-    name: "pineapple",
-    price: 10,
-    currency: "NGN",
-    location:"",
-    description:"",
-    available:"",
-    Id: 9
-},
-{
-    name: "pineapple",
-    price: 10,
-    currency: "NGN",
-    location:"",
-    description:"",
-    available:"",
-    Id: 10
 }
 ]
 
 //Creating a get endpoint for the homepage("/")
 server.get("/", function(req,res) {
-  res.send("Hello, Welcome to Ultra Home");  
+  res.send("Hello, Welcome to Ultra Homes");  
 })
 
 //Creating a post endpoint that accepts data from the client 
