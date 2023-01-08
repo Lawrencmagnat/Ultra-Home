@@ -150,7 +150,7 @@ function findItem(id) {
 }
 
 //create a get endpont for getting list of houses available
-server.get("/items", (req, res) => {
+server.get("/getitems", (req, res) => {
   return res.json(getItems())
 });
 
