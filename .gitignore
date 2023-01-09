@@ -1,2 +1,18 @@
-##node modules
+#Ignore node_modules
 node_modules
+
+#ignore All .logfiles
+*.log
+
+**/name
+#Ignore Mac system files
+.DS_store
+
+#Ignore all text files
+*.txt
+
+#Ignorw files related to API keys
+.env
+
+#Ignore SASS config files
+.sass-cache
