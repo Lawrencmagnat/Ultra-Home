@@ -169,5 +169,9 @@ server.get("/items/:id", (req, res) => {
 
 server.listen(8080, () => {
   console.log("Server is running...");
+<<<<<<< HEAD
 });
 //>>>>>>> 747ae9ca550d72a64044c7f1a0458251ae389c25...
+=======
+});
+>>>>>>> bfb1b9de530ecedfecfd76aeaef87d0a222db826
