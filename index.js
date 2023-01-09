@@ -91,7 +91,7 @@ server.get("/", function(req,res) {
 })
 
 //Creating a post endpoint that accepts data from the client 
-server.post('/create-account', function(req,res){
+server.post('/sign-up', function(req,res){
        const {firstName, lastName, email, password, confirmPassword} = req.body;
 
        if(!firstName || !lastName || !email || !password || !confirmPassword){
