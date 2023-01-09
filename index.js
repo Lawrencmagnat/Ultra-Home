@@ -12,7 +12,7 @@ const port = 8080;
 
 const items = [
     {
-    name: "Fully detached duplex",
+    name: "Fully detached duplex(Evernest Estate)",
     price: 7500000,
     currency: "NGN",
     location:"Lagos, Nigeria",
@@ -21,7 +21,7 @@ const items = [
     Id: 1
 },
 {
-    name: "Semi-detached duplex",
+    name: "Semi-detached duplex(Pinecrest Estate)",
     price: 2300000,
     currency: "NGN",
     location:"Lagos, Nigeria",
@@ -30,7 +30,7 @@ const items = [
     Id: 2
 },
 {
-  name: "Bungalow",
+  name: "Bungalow(Pinecrest Estate)",
   price: 1500000,
   currency: "NGN",
   location:"Lagos, Nigeria",
@@ -39,8 +39,8 @@ const items = [
   Id: 3
 },
 {
-  name: "Unique 5 bedroom duplex",
-  price: 1200000,
+  name: "Unique 5 bedroom duplex(Evermark Estate))",
+  price: 3000000,
   currency: "NGN",
   location:"Lagos, Nigeria",
   description:"4 bedrooms, 5 bathrooms, 900sqft",
@@ -48,7 +48,7 @@ const items = [
   Id: 4
 },
 {
-  name: "Fully detached duplex",
+  name: "Fully detached duplex(Luxuna Estate)",
   price: 8000000,
   currency: "NGN",
   location:"Abuja, Nigeria",
@@ -57,7 +57,7 @@ const items = [
   Id: 5
 },
 {
-  name: "Bungalow",
+  name: "Bungalow(Riseonic Estate)",
   price: 1200000,
   currency: "NGN",
   location:"Enugu, Nigeria",
@@ -66,7 +66,7 @@ const items = [
   Id: 6
 },
 {
-    name: "Semi-detached duplex",
+    name: "Semi-detached duplex(Primdale Estate)",
     price: 2000000,
     currency: "NGN",
     location:"Asaba, Nigeria",
@@ -75,7 +75,7 @@ const items = [
     Id: 7
 },
 {
-    name: "Fully detached duplex",
+    name: "Fully detached duplex(Urban Estate)",
     price: 4200000,
     currency: "NGN",
     location:"Abia, Nigeria",
