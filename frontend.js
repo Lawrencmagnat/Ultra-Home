@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+const header = document.querySelector("header");
+
+window.addEventListener('scroll', function(){
+    header.classList.toggle("sticky", window.scrollY > 0);
+});
+=======
 const { response } = require("express");
 const express = require("express");
 const { Server } = require("http");
@@ -202,3 +209,4 @@ server.get("/items/:id", (req, res) => {
 server.listen(8080, () => {
   console.log("Server is running...");
 });
+>>>>>>> 747ae9ca550d72a64044c7f1a0458251ae389c25
