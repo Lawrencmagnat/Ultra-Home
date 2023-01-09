@@ -7,11 +7,8 @@ const server = express();
 server.use(express.urlencoded({ extended:false }));
 server.use(express.json());
 
-const user = {
-    name: "Emeka Ugwu",
-    email: "emekaugwu114@gmail.com",
-    password: "Emeka24",
-};
+const userDetail = {}
+const port = 8080;
 
 const items = [
     {
@@ -94,14 +91,89 @@ server.get("/", function(req,res) {
 })
 
 //Creating a post endpoint that accepts data from the client 
-server.post("/create-account", function(req, res) {
-  console.log("Query", req.query);
-  console.log("Body", req.body)
-  
-  res.json(req.query);
-})
+server.post('/create-account', function(req,res){
+       const {firstName, lastName, email, password, confirmPassword} = req.body;
 
-// GET/items
+       if(!firstName || !lastName || !email || !password || !confirmPassword){
+        res.status(400).send({
+            message: "Please provide all required informaton"
+        })
+       }else{
+        const registeredUser = {
+          firstName,
+          lastName,
+          email,
+          password,
+          confirmPassword
+        }
+        
+        res.status(200).send({
+            message: 'User registered successfully',
+            user:registeredUser
+        })
+       }
+
+});
+
+server.post('/Input Personal Details', function(req,res){
+  const {firstName, lastName, email, telephone, feature, homedetails} = req.body;
+
+  if(!firstName || !lastName || !email || !telephone || !feature || !homedetails){
+   res.status(400).send({
+       message: "Please provide all required informaton"
+   })
+  }else{
+   const registeredUser = {
+     firstName,
+     lastName,
+     email,
+     telephone,
+     feature,
+     homedetails
+   }
+   
+   res.status(200).send({
+       message: 'Details saved successfully',
+       user:registeredUser
+   })
+  }
+
+});
+
+
+server.post('/login-page', function(req,res){
+       const{email, password} = req.body;
+       if (email === 'admin' && password ==='admin'){
+           const token = '123456';
+           res.json({
+               success: true,
+               token,
+           });
+       }else{
+         res.status(401).json({
+             success: false,
+             message: 'Username or password is incorrect'
+         });
+       }
+
+});
+
+server.post('/contact-us', function(req,res){
+       const{name, email, phonenumber, message} = req.body;
+
+       if (!name || !email || !phonenumber || !message){
+           return res.status(200).send({
+              success: false,
+              message: 'Please provide all the fields'
+           })
+       }
+       return res.status(200).send({
+          success: true,
+          message: "Your message is sent successfully"
+       });
+});
+
+
 function getItems() {
   return {
     statusCode: 200,
@@ -167,11 +239,7 @@ server.get("/items/:id", (req, res) => {
   return res.json(findItem(id))
 });
 
-server.listen(8080, () => {
-  console.log("Server is running...");
-<<<<<<< HEAD
-});
-//>>>>>>> 747ae9ca550d72a64044c7f1a0458251ae389c25...
-=======
-});
->>>>>>> bfb1b9de530ecedfecfd76aeaef87d0a222db826
+server.listen(process.env.port || port, function() {
+
+      console.log('Server listening at port ${port}');
+})
