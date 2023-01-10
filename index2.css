@@ -1,0 +1,58 @@
+* {
+    
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    width: 100%;
+}
+.navbar-bg{
+    background-color: #48bf91;
+   
+}
+.home-screen{
+    background-image: url('/images/Img1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    opacity: 0.8;
+
+}
+.home-text{
+    position: absolute;
+    margin: 200px auto;
+    text-align: center;
+}
+.home-text h1{
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.home-text-style {
+    color: #48bf91;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.home-text p{
+    color: #fff;
+    
+}
+.about-text{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+.about-pic-text{
+    text-align: center;
+}
+.btn{
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+
+}
