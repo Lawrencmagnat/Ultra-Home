@@ -21,7 +21,7 @@
 
 body {
     background: var(--text-color);
-    color: var(--text-color);
+    color: var(--bg-color);
 }
 
 header {
@@ -145,7 +145,8 @@ span {
     box-sizing: border-box;
     font-family: poppins;
 }
-.color{
+
+.color {
     background: var(--bg-color);
     align-items: center;
 }
@@ -160,7 +161,7 @@ span {
     align-items: center;
     justify-content: center;
     background: whitesmoke;
-    background: linear-gradient(to bottom right, #012020, cyan); 
+    background: linear-gradient(to bottom right, #012020, cyan);
 }
 
 .prd_ds_holder {
@@ -183,7 +184,8 @@ span {
     transition: .3s;
     background: var(--bg-color);
 }
-.service{
+
+.service {
     background: var(--bg-color);
 }
 
@@ -219,10 +221,11 @@ span {
     font-size: var(--p-font);
     line-height: 30px;
     margin-bottom: 2rem;
+    color: #fff
 }
 
-.link{ 
-    text-decoration:none;
+.link {
+    text-decoration: none;
     display: inline-block;
     padding: 14px 40px;
     border-radius: 0.6rem;
@@ -236,17 +239,18 @@ span {
     margin-bottom: 20px;
     margin-left: 485px;
 
-    
- 
-   
+
+
+
 }
 
-.link a{
-   
+.link a {
+
     text-decoration: none;
-    
+
 
 }
+
 .link:hover {
     transform: scale(1.01) translateY(-15px);
     background: transparent;
@@ -254,39 +258,42 @@ span {
 }
 
 .btn {
-    
+
     color: #fff;
     padding: 14px 40px;
     border-radius: 0.6rem;
-   
+
 }
 
-.house{
+.house {
     justify-content: space-between;
     color: var(--bg-color);
- 
+
 }
 
-.pd-lm , .filter li{
+.pd-lm,
+.filter li {
     /* display: inline-block; */
     display: flex;
-   align-items: center;
-   padding: 30px 10%;
-    
+    align-items: center;
+    padding: 30px 10%;
+
 
 }
-.filter li{
+
+.filter li {
     display: inline-block;
     padding: 0px 20px;
-   
+
 
 }
 
 
-.pd-lm a, .filter li a{
-   transition: all .3s ease;
+.pd-lm a,
+.filter li a {
+    transition: all .3s ease;
 
-   
+
     display: block;
     text-decoration: none;
     padding: 14px 16px;
@@ -294,7 +301,8 @@ span {
     font-weight: bold;
 }
 
-.pd-lm a, .filter li a{
+.pd-lm a,
+.filter li a {
     display: inline-block;
     color: var(--other-color);
     margin-left: 55px;
@@ -303,15 +311,15 @@ span {
     text-decoration: none;
     font-size: var(--p-font);
     font-weight: 600;
-    
-  
-    
 
-    
+
+
+
+
 }
 
-.pd-lm li a:hover{
-    background:  #ddd;
+.pd-lm li a:hover {
+    background: #ddd;
     color: var(--bg-color);
     border: 2px solid transparent;
     border-radius: 6.8px;
@@ -326,11 +334,171 @@ span {
 
 
 
+.shop {
+    margin-top: 2rem;
+
+}
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 2rem;
+}
+
+.product-box {
+    position: relative;
+
+}
+
+.product-box:hover {
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+
+}
+
+.general {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50, rgba(0, 0, 0, 0.5)50%);
+    background-image: url(/images/image\ 16\ \(3\).png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: inline-block;
+}
 
 
 
-    
+.mains {
+    width: 100%;
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50, rgba(0, 0, 0, 0.5)50%);
+    background-image: url(/images/image\ 16\ \(3\).png); */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.navbar {
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+
+
+}
+
+.content {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: white;
+    display: inline-block;
+    padding-top: 30px;
+    margin-left: 150px;
+    display: grid;
+
+
+}
+
+.content p {
+
+
+    padding-bottom: 25px;
+    font-family: Poppins;
+    letter-spacing: 1.2px;
+    line-height: 20px;
+
+
+}
+
+.content h2 {
+    color: #0CA296;
+    font-family: poppins;
+    font-size: 50px;
+    margin-bottom: 2%;
+    letter-spacing: 1.5px;
+
+
+}
+
+.content .cn {
+    width: 160px;
+    height: 40px;
+    background: #0CA296;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+
+
+
+}
+
+.said {
+    margin-top: 120px;
+}
+
+.content .cn a {
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease;
+}
+
+.content .cn:hover {
+    background-color: #fff;
+    color: var(--bg-color);
+
+}
+
+.calm {}
+
+.words {
+    display: inline-block;
+
+}
+
+.words h3 {
+    text-align: end;
+    color: #0CA296;
+    font-family: Open Sans;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0em;
 
 
 
 
+
+    /* To be continued.. */
+}
+
+.words h4 {
+    text-align: end;
+    color: #fff;
+    font-family: Open Sans;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+
+
+}
+
+.words p {
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: end;
+
+
+
+    padding-bottom: 25px;
+    font-family: Poppins;
+    letter-spacing: 1.2px;
+    line-height: 20px;
+
+    /* text-rendering: ; */
+}
